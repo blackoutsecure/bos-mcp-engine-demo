@@ -34,18 +34,6 @@
   Access-Control-Allow-Headers: Content-Type, If-Modified-Since, Cache-Control
   Cache-Control: no-store
 
-/v0/servers
-  Access-Control-Allow-Origin: *
-  Access-Control-Allow-Methods: GET, HEAD, OPTIONS
-  Access-Control-Allow-Headers: Content-Type, If-Modified-Since, Cache-Control
-  Cache-Control: no-store
-
-/v0/servers/index.json
-  Access-Control-Allow-Origin: *
-  Access-Control-Allow-Methods: GET, HEAD, OPTIONS
-  Access-Control-Allow-Headers: Content-Type, If-Modified-Since, Cache-Control
-  Cache-Control: no-store
-
 /v0.1/health
   Access-Control-Allow-Origin: *
   Access-Control-Allow-Methods: GET, HEAD, OPTIONS
