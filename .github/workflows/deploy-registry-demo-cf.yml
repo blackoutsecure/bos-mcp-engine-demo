@@ -1,4 +1,4 @@
-name: Generate and Deploy MCP Registry to Cloudflare
+name: Generate and Deploy MCP Registry Demo to Cloudflare
 
 on:
   push:
