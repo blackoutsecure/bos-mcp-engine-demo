@@ -2,6 +2,7 @@
 Thumbs.db
 
 #dist/
+#servers/
 .idea/
 *.swp
 *.swo
