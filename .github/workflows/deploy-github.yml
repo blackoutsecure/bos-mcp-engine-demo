@@ -19,7 +19,7 @@ concurrency:
   cancel-in-progress: false
 
 env:
-  DEPLOY_DIR: ./dist/public
+  DEPLOY_DIR: public
 
 jobs:
   deploy:
@@ -38,8 +38,9 @@ jobs:
       - name: Generate static MCP registry
         uses: blackoutsecure/bos-mcp-registry-engine@latest
         with:
+          action_type: generate_registry
           source: ./servers
-          output: ./dist
+          output: ${{ env.DEPLOY_DIR }}
           deployment_environment: github
 
       - name: Upload artifact
