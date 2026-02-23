@@ -25,6 +25,8 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+        with:
+          ref: registry-demo-cf
 
       - name: Generate static MCP registry
         uses: blackoutsecure/bos-mcp-registry-engine@latest
