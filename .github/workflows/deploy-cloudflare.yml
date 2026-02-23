@@ -14,7 +14,7 @@ permissions:
 
 env:
   SITE_URL: https://demo.mcp.registry.blackoutsecure.dev
-  DEPLOY_DIR: ./public
+  DEPLOY_DIR: dist/public
   CLOUDFLARE_PROJECT_NAME: bos-mcp-registry-demo
 
 jobs:
