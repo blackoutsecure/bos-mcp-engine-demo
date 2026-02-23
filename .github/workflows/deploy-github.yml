@@ -19,7 +19,7 @@ concurrency:
   cancel-in-progress: false
 
 env:
-  DEPLOY_DIR: public
+  DEPLOY_DIR: dist/public
 
 jobs:
   deploy:
@@ -40,7 +40,7 @@ jobs:
         with:
           action_type: generate_registry
           source: ./servers
-          output: ${{ env.DEPLOY_DIR }}
+          output: dist
           deployment_environment: github
 
       - name: Upload artifact
