@@ -1,8 +1,0 @@
-/ /v0.1/ 302
-/v0.1 /v0.1/ 302
-/servers.json /v0.1/servers.json 302
-/servers /v0.1/servers/index.json 302
-/v0/servers /v0.1/servers/index.json 302
-/health /v0.1/health.json 302
-/ping /v0.1/ping.json 302
-/version /v0.1/version.json 302
