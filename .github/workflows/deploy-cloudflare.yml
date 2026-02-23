@@ -15,6 +15,7 @@ permissions:
 env:
   SITE_URL: https://demo.mcp.registry.blackoutsecure.dev
   OUTPUT_DIR: dist
+  DEPLOY_DIR: dist/public
   CLOUDFLARE_PROJECT_NAME: bos-mcp-registry-demo
 
 jobs:
@@ -37,4 +38,4 @@ jobs:
         with:
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
-          command: pages deploy ${{ env.OUTPUT_DIR }} --project-name=${{ env.CLOUDFLARE_PROJECT_NAME }}
+          command: pages deploy ${{ env.DEPLOY_DIR }} --project-name=${{ env.CLOUDFLARE_PROJECT_NAME }}
