@@ -1,0 +1,50 @@
+name: Generate and Deploy MCP Registry Demo to GitHub Pages
+
+on:
+  push:
+    branches: [registry-demo-gh]
+    paths:
+      - 'servers/**'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+env:
+  SITE_URL: https://demo-gh.mcp.registry.blackoutsecure.dev
+  OUTPUT_BASE_DIR: dist
+  OUTPUT_PUBLIC_DIR: public
+  LOG_LEVEL: debug
+  COMMIT_GENERATED_ARTIFACTS: true
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Generate static MCP registry
+        uses: blackoutsecure/bos-mcp-registry-engine@latest
+        with:
+          action_type: generate_registry
+          source: ./servers
+          output_directory: ${{ env.OUTPUT_BASE_DIR }}
+          output: ${{ env.OUTPUT_PUBLIC_DIR }}
+          deployment_environment: github-pages
+          commit_generated_artifacts: ${{ env.COMMIT_GENERATED_ARTIFACTS }}
+          log_level: ${{ env.LOG_LEVEL }}
+
+      - name: Upload artifact to GitHub Pages
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: ${{ env.OUTPUT_BASE_DIR }}/${{ env.OUTPUT_PUBLIC_DIR }}
+
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
