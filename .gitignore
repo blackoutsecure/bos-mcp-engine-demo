@@ -1,21 +1,37 @@
+# OS files
 .DS_Store
 Thumbs.db
 
-dist/
-servers/
+# IDE
 .idea/
 *.swp
 *.swo
+.vscode/settings.json
+.vscode/launch.json
 
+# Dependencies
+node_modules/
+
+# Environment variables (add .env.example for template)
 .env
 .env.*
 !.env.example
 
+# Logs
 *.log
 npm-debug.log*
 yarn-debug.log*
 pnpm-debug.log*
 
-node_modules/
+# Build artifacts
+dist/
+build/
 
+# Platform-specific
 .wrangler/
+.vercel/
+.netlify/
+
+# Local development
+*.pem
+*.env.local
