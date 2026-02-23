@@ -34,6 +34,7 @@ jobs:
           output_directory: ${{ env.OUTPUT_BASE_DIR }}
           output: ${{ env.OUTPUT_PUBLIC_DIR }}
           deployment_environment: cloudflare
+          commit_generated_artifacts: 'false'
 
       - name: Deploy to Cloudflare Pages
         uses: cloudflare/wrangler-action@v3
