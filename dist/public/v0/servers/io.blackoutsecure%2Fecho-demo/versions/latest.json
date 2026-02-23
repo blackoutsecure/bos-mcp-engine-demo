@@ -1,0 +1,64 @@
+{
+  "server": {
+    "name": "io.blackoutsecure/echo-demo",
+    "title": "Echo Demo MCP Server",
+    "description": "Minimal demonstration MCP server used for BOS registry examples",
+    "author": "Blackout Mode",
+    "websiteUrl": "https://github.com/marketplace/actions/blackout-secure-mcp-registry-engine",
+    "repository": {
+      "url": "https://github.com/blackoutsecure/bos-mcp-registry-engine",
+      "source": "github"
+    },
+    "license": "Apache-2.0",
+    "categories": [
+      "demo",
+      "utilities"
+    ],
+    "tags": [
+      "mcp",
+      "echo",
+      "registry-demo"
+    ],
+    "version": "1.0.0",
+    "releaseDate": "2026-02-22",
+    "packages": [
+      {
+        "registryType": "npm",
+        "identifier": "@example/echo-demo-mcp",
+        "version": "1.0.0",
+        "transport": {
+          "type": "stdio"
+        }
+      }
+    ],
+    "mcpVersion": "0.1",
+    "runtime": "node",
+    "minNodeVersion": "18.0.0",
+    "installCommand": "npm install -g @example/echo-demo-mcp",
+    "runCommand": "echo-demo-mcp",
+    "capabilities": {
+      "resources": false,
+      "tools": true,
+      "prompts": false
+    },
+    "tools": [
+      {
+        "name": "echo",
+        "description": "Returns the input message unchanged"
+      }
+    ],
+    "resources": [],
+    "configuration": {
+      "required": [],
+      "optional": []
+    }
+  },
+  "_meta": {
+    "io.modelcontextprotocol.registry/official": {
+      "status": "active",
+      "publishedAt": "2026-02-22T00:00:00.000Z",
+      "updatedAt": "2026-02-22T00:00:00.000Z",
+      "isLatest": true
+    }
+  }
+}
