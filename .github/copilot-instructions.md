@@ -10,6 +10,8 @@ This repository is a demo MCP registry that shows:
 - How to commit and deploy static registry output under `registry/v0.1/`
 
 ## Scope and Constraints
+- This branch (`registry-demo-gh`) is **GitHub Pages focused** for static hosting only.
+- Do not implement deployments for other cloud platforms (Cloudflare, AWS, Azure, etc) on this branch.
 - Do not reimplement the registry engine in this repo.
 - Do not add backend servers or dynamic hosting logic.
 - Do not modify the engine action itself; only reference and use it.
@@ -25,8 +27,13 @@ This repository is a demo MCP registry that shows:
 - For this demo's metadata links, prefer homepage `https://github.com/marketplace/actions/blackout-secure-mcp-registry-engine`.
 - For this demo's metadata links, prefer repository `https://github.com/blackoutsecure/bos-mcp-registry-engine`.
 
+## Deployment
+- **Primary Platform**: GitHub Pages (via GitHub Actions)
+- Registry is deployed automatically to GitHub Pages on push to `registry-demo-gh` branch
+- Static artifacts are committed to the repository and served via GitHub Pages
+
 ## Preferred Patterns
 - Favor small, illustrative MCP service examples.
 - Prefer clarity and readability over abstraction.
-- Generate static output suitable for static hosting platforms.
+- Generate static output suitable for GitHub Pages hosting.
 - Keep changes surgical and aligned with this repository’s demo purpose.
