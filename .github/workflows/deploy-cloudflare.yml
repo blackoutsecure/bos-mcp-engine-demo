@@ -33,7 +33,7 @@ jobs:
           deployment_environment: cloudflare
 
       - name: Deploy to Cloudflare Pages
-        uses: cloudflare/wrangler-action@v4
+        uses: cloudflare/wrangler-action@v3.14.1
         with:
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
