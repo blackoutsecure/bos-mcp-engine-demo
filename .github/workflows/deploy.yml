@@ -2,7 +2,7 @@ name: Generate and Deploy MCP Registry to Cloudflare
 
 on:
   push:
-    branches: [main]
+    branches: [registry-demo-cf]
     paths:
       - 'servers/**'
   workflow_dispatch:
