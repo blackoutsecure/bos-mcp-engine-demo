@@ -1,0 +1,39 @@
+name: Generate and Deploy MCP Registry to Cloudflare
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'servers/**'
+      - 'mcp-registry.config.json'
+      - '.github/workflows/deploy-cloudflare.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+env:
+  SITE_URL: https://demo.mcp.registry.blackoutsecure.dev
+  DEPLOY_DIR: ./dist/public
+  CLOUDFLARE_PROJECT_NAME: bos-mcp-registry-demo
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Generate static MCP registry
+        uses: blackoutsecure/bos-mcp-registry-engine@latest
+        with:
+          source: ./servers
+          output: ./dist
+          deployment_environment: cloudflare
+
+      - name: Deploy to Cloudflare Pages
+        uses: cloudflare/wrangler-action@v3
+        with:
+          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          command: pages deploy ${{ env.DEPLOY_DIR }} --project-name=${{ env.CLOUDFLARE_PROJECT_NAME }}

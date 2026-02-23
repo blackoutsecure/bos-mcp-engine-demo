@@ -1,0 +1,14 @@
+{
+  "name": "io.blackoutsecure/filesystem-demo",
+  "title": "Filesystem Demo MCP Server",
+  "description": "Minimal demonstration MCP server exposing basic filesystem-style tools",
+  "author": "Blackout Mode",
+  "websiteUrl": "https://github.com/marketplace/actions/blackout-secure-mcp-registry-engine",
+  "repository": {
+    "url": "https://github.com/blackoutsecure/bos-mcp-registry-engine",
+    "source": "github"
+  },
+  "license": "Apache-2.0",
+  "categories": ["demo", "filesystem"],
+  "tags": ["mcp", "filesystem", "registry-demo"]
+}

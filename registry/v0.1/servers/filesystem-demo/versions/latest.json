@@ -1,0 +1,43 @@
+{
+  "name": "filesystem-demo",
+  "displayName": "Filesystem Demo MCP Server",
+  "description": "Minimal demonstration MCP server exposing basic filesystem-style tools",
+  "author": "Blackout Mode",
+  "homepage": "https://github.com/marketplace/actions/blackout-secure-mcp-registry-engine",
+  "repository": "https://github.com/blackoutsecure/bos-mcp-registry-engine",
+  "license": "Apache-2.0",
+  "categories": ["demo", "filesystem"],
+  "tags": ["mcp", "filesystem", "registry-demo"],
+  "version": "1.0.0",
+  "releaseDate": "2026-02-22",
+  "mcpVersion": "0.1",
+  "runtime": "node",
+  "minNodeVersion": "18.0.0",
+  "installCommand": "npm install -g @example/filesystem-demo-mcp",
+  "runCommand": "filesystem-demo-mcp",
+  "capabilities": {
+    "resources": true,
+    "tools": true,
+    "prompts": false
+  },
+  "tools": [
+    {
+      "name": "list_files",
+      "description": "Lists files from a configured demo directory"
+    },
+    {
+      "name": "read_file",
+      "description": "Reads a file from a configured demo directory"
+    }
+  ],
+  "resources": [
+    {
+      "name": "file",
+      "description": "Exposes file content from a configured demo directory"
+    }
+  ],
+  "configuration": {
+    "required": [],
+    "optional": []
+  }
+}

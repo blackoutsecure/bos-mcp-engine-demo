@@ -1,0 +1,35 @@
+{
+  "version": "1.0.0",
+  "releaseDate": "2026-02-22",
+  "packages": [
+    {
+      "registryType": "npm",
+      "identifier": "@example/echo-demo-mcp",
+      "version": "1.0.0",
+      "transport": {
+        "type": "stdio"
+      }
+    }
+  ],
+  "mcpVersion": "0.1",
+  "runtime": "node",
+  "minNodeVersion": "18.0.0",
+  "installCommand": "npm install -g @example/echo-demo-mcp",
+  "runCommand": "echo-demo-mcp",
+  "capabilities": {
+    "resources": false,
+    "tools": true,
+    "prompts": false
+  },
+  "tools": [
+    {
+      "name": "echo",
+      "description": "Returns the input message unchanged"
+    }
+  ],
+  "resources": [],
+  "configuration": {
+    "required": [],
+    "optional": []
+  }
+}
