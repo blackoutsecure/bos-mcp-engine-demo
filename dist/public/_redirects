@@ -5,3 +5,10 @@
 /health /v0.1/health.json 302
 /ping /v0.1/ping.json 302
 /version /v0.1/version.json 302
+/v0.1/health /v0.1/health.json 302
+/v0.1/ping /v0.1/ping.json 302
+/v0.1/version /v0.1/version.json 302
+/v0.1/servers/io.blackoutsecure%2Fecho-demo/versions/latest /v0.1/servers/io.blackoutsecure%2Fecho-demo/versions/latest.json 302
+/v0.1/servers/io.blackoutsecure%2Fecho-demo/versions/1.0.0 /v0.1/servers/io.blackoutsecure%2Fecho-demo/versions/1.0.0.json 302
+/v0.1/servers/io.blackoutsecure%2Ffilesystem-demo/versions/latest /v0.1/servers/io.blackoutsecure%2Ffilesystem-demo/versions/latest.json 302
+/v0.1/servers/io.blackoutsecure%2Ffilesystem-demo/versions/1.0.0 /v0.1/servers/io.blackoutsecure%2Ffilesystem-demo/versions/1.0.0.json 302
