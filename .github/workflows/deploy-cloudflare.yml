@@ -27,7 +27,7 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Generate static MCP registry
-        uses: blackoutsecure/bos-mcp-registry-engine@latest
+        uses: blackoutsecure/bos-mcp-registry-engine@v1
         with:
           action_type: generate_registry
           source: ./servers
