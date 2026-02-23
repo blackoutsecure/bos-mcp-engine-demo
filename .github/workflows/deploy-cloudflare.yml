@@ -10,7 +10,7 @@ on:
   workflow_dispatch:
 
 permissions:
-  contents: read
+  contents: write
 
 env:
   SITE_URL: https://demo.mcp.registry.blackoutsecure.dev
@@ -34,7 +34,7 @@ jobs:
           output_directory: ${{ env.OUTPUT_BASE_DIR }}
           output: ${{ env.OUTPUT_PUBLIC_DIR }}
           deployment_environment: cloudflare
-          commit_generated_artifacts: 'false'
+          commit_generated_artifacts: 'true'
 
       - name: Deploy to Cloudflare Pages
         uses: cloudflare/wrangler-action@v3
