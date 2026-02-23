@@ -14,6 +14,7 @@ permissions:
 
 env:
   SITE_URL: https://demo.mcp.registry.blackoutsecure.dev
+  OUTPUT_DIR: dist
   DEPLOY_DIR: public
   CLOUDFLARE_PROJECT_NAME: bos-mcp-registry-demo
 
@@ -29,7 +30,7 @@ jobs:
         with:
           action_type: generate_registry
           source: ./servers
-          output: ${{ env.DEPLOY_DIR }}
+          output: ${{ env.OUTPUT_DIR }}/${{ env.DEPLOY_DIR }}
           deployment_environment: cloudflare
 
       - name: Deploy to Cloudflare Pages
