@@ -14,7 +14,7 @@ permissions:
 
 env:
   SITE_URL: https://demo.mcp.registry.blackoutsecure.dev
-  DEPLOY_DIR: dist/public
+  DEPLOY_DIR: dist
   CLOUDFLARE_PROJECT_NAME: bos-mcp-registry-demo
 
 jobs:
@@ -33,7 +33,7 @@ jobs:
           deployment_environment: cloudflare
 
       - name: Deploy to Cloudflare Pages
-        uses: cloudflare/wrangler-action@v3.14.1
+        uses: cloudflare/wrangler-action@v3
         with:
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
