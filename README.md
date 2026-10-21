@@ -78,6 +78,9 @@ For detailed examples, see the demo branches.
 - **Purpose**: This is a public demo repository. Use it as a template or reference.
 - **Production**: Do not treat generated examples as production content.
 - **Engine Implementation**: The registry engine lives in a separate [repository](https://github.com/blackoutsecure/bos-mcp-registry-engine).
+- **Workflow Trust**: Deployment workflows pin actions to commit SHAs resolved
+  from their existing release refs. Review upstream changes before updating
+  those pins, and update copied workflows on the demo branches separately.
 - **Standards**: All JSON metadata follows [MCP registry schema](https://github.com/modelcontextprotocol/registry) conventions.
 
 ---
